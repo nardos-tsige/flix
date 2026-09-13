@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@1,600;1,700&family=Fraunces:wght@600;700;900&family=Outfit:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: 'Outfit', system-ui, sans-serif;
+    overflow-x: hidden;
+    background-color: #0E0F0C;
+    color: #F5F2E8;
+    transition: background-color .35s ease, color .35s ease;
+  }
+  html:not(.dark) body {
+    background-color: #FBF8F0;
+    color: #1A1B16;
+  }
+}
+
+@layer utilities {
+  .no-bar::-webkit-scrollbar { display: none; }
+  .no-bar { -ms-overflow-style: none; scrollbar-width: none; }
+
+  .brand-italic {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-style: italic;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+  }
+
+  /* --- Light mode surface helpers --- */
+  html:not(.dark) .surface-card {
+    background-color: #FFFFFF;
+    border-color: #E2DAC4;
+  }
+  html:not(.dark) .surface-soft {
+    background-color: #F4EFE0;
+    border-color: #E2DAC4;
+  }
+  html:not(.dark) .surface-base {
+    background-color: #FBF8F0;
+  }
+  html:not(.dark) .surface-solid {
+    background-color: #FFFFFF;
+  }
+}
+
+/* Cleanup scrollbar - subtle, editorial */
+::-webkit-scrollbar { width: 10px; height: 10px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb {
+  background: rgba(228, 161, 27, .25);
+  border-radius: 8px;
+}
+::-webkit-scrollbar-thumb:hover { background: rgba(228, 161, 27, .5); }

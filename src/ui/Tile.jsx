@@ -38,7 +38,7 @@ export default function Tile({ item, i = 0, onOpen, onPlay }) {
         dark:bg-night-card dark:border-night-line
         transition-all duration-300
         hover:border-brand-gold/40
-        hover:shadow-[0_18px_40px_-12px_rgba(228,161,27,0.35)]
+        hover:shadow-[0_18px_40px_-12px_rgba(63,163,77,0.35)]
       "
     >
       <div className="relative aspect-[2/3] w-full overflow-hidden">
@@ -49,9 +49,18 @@ export default function Tile({ item, i = 0, onOpen, onPlay }) {
           className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-[1.08]"
         />
 
-        <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/10 to-transparent opacity-70 group-hover:opacity-100 transition-opacity duration-400" />
+        <div className="
+          absolute inset-0
+          bg-gradient-to-t from-black/85 via-black/10 to-transparent
+          opacity-70 group-hover:opacity-100
+          transition-opacity duration-400
+          pointer-events-none
+        " />
 
-        <div className="absolute top-3 left-3 flex items-center gap-1 px-2 py-1 rounded-full bg-black/60 backdrop-blur-md border border-brand-gold/25">
+        <div className="
+          absolute top-3 left-3 flex items-center gap-1 px-2 py-1
+          rounded-full bg-black/60 backdrop-blur-md border border-brand-gold/25
+        ">
           <span className="text-brand-gold text-[11px]">★</span>
           <span className="text-white text-[11px] font-semibold">{score}</span>
         </div>
@@ -60,7 +69,7 @@ export default function Tile({ item, i = 0, onOpen, onPlay }) {
           onClick={onSave}
           className={`
             absolute top-3 right-3 p-2 rounded-full cursor-pointer
-            backdrop-blur-md border transition-all
+            backdrop-blur-md border transition-all z-10
             ${picked
               ? 'bg-brand-gold border-brand-gold text-night-base'
               : 'bg-black/50 border-white/15 text-white/80 hover:text-white hover:bg-black/70'
@@ -76,6 +85,7 @@ export default function Tile({ item, i = 0, onOpen, onPlay }) {
           opacity-0 translate-y-3
           group-hover:opacity-100 group-hover:translate-y-0
           transition-all duration-400
+          z-10
         ">
           <h3 className="text-white font-title font-semibold text-sm leading-tight line-clamp-1">
             {item.title}

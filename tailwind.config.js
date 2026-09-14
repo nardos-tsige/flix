@@ -5,33 +5,32 @@ export default {
   theme: {
     extend: {
       colors: {
-        //flix palette - warm editorial feel
         night: {
-          base: '#0E0F0C',
-          soft: '#1A1C18',
-          card: '#222620',
-          line: '#2E3329',
+          base: '#050505',
+          soft: '#0F0F0F',
+          card: '#181818',
+          line: '#2A2A2A',
         },
         day: {
-          base: '#FBF8F0',
-          soft: '#F4EFE0',
+          base: '#FAFAFA',
+          soft: '#F2F2F2',
           card: '#FFFFFF',
-          line: '#E2DAC4',
+          line: '#E5E5E5',
         },
         brand: {
-          gold: '#E4A11B',
-          goldLight: '#F5C760',
-          goldDark: '#A8760F',
-          forest: '#1F4D3A',
-          forestLight: '#2E6B52',
-          clay: '#C8552F',
+          gold: '#FAFAFA',
+          goldLight: '#FFFFFF',
+          goldDark: '#050505',
+          forest: '#737373',
+          forestLight: '#A3A3A3',
+          clay: '#E07A5F',
         },
         ink: {
-          main: '#F5F2E8',
-          soft: '#B8B3A0',
-          muted: '#807A66',
-          dark: '#1A1B16',
-          darkSoft: '#4A4B42',
+          main: '#FAFAFA',
+          soft: '#B8B8B8',
+          muted: '#737373',
+          dark: '#0A0A0A',
+          darkSoft: '#525252',
         },
       },
       fontFamily: {
@@ -40,8 +39,8 @@ export default {
         body: ['Outfit', 'system-ui', 'sans-serif'],
       },
       backgroundImage: {
-        'day-fade': 'linear-gradient(180deg, rgba(251,248,240,0) 0%, #FBF8F0 90%)',
-        'night-fade': 'linear-gradient(180deg, rgba(14,15,12,0) 0%, #0E0F0C 90%)',
+        'day-fade': 'linear-gradient(180deg, rgba(250,250,250,0) 0%, #FAFAFA 90%)',
+        'night-fade': 'linear-gradient(180deg, rgba(5,5,5,0) 0%, #050505 90%)',
       },
       keyframes: {
         drift: {

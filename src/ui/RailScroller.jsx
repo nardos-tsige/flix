@@ -29,16 +29,15 @@ export default function RailScroller({ children, className = '' }) {
   const btnClass = `
     absolute top-1/2 -translate-y-1/2 z-20 w-10 h-10 rounded-full
     flex items-center justify-center backdrop-blur-md
-    opacity-0 group-hover:opacity-100 transition-all duration-300
     bg-day-card/90 border border-day-line text-ink-dark
     hover:bg-brand-gold hover:text-night-base hover:border-brand-gold
     dark:bg-night-card/90 dark:border-night-line dark:text-ink-main
     dark:hover:bg-brand-gold dark:hover:text-night-base
-    cursor-pointer
+    cursor-pointer transition-colors rail-btn
   `
 
   return (
-    <div className="relative group">
+    <div className="relative rail-scroller">
       {left && (
         <button
           onClick={() => nudge('l')}
